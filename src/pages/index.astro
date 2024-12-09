@@ -1,5 +1,5 @@
 ---
-
+import App from "../components/converter.svelte";
 ---
 
 <html lang="en">
@@ -8,9 +8,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script src="/js/tg-web-app.js" is:inline></script>
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<App client:load />
 	</body>
 </html>
