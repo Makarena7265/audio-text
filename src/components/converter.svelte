@@ -45,7 +45,7 @@
     isConverting = true;
     const audio = await convertToOgg(file);
     const base64 = await convertToBase64Async(audio);
-    tg.sendData(base64);
+    tg.sendData(JSON.stringify({ audio: base64 }));
     isConverting = false;
   }
 
